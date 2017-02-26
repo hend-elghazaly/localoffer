@@ -62,3 +62,6 @@ gem 'bootstrap-sass'
 
 #gem for the form
 gem 'mail_form', '~> 1.6'
+
+#gem for sending form
+gem 'sendgrid-ruby'
