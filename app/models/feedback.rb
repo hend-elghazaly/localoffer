@@ -7,7 +7,7 @@ class Feedback < MailForm::Base
     {
       :subject => "Feedback Form",
       #change email later
-      :to => "helghazaly1@sheffield.ac.uk",
+      :to => "localofferyp@gmail.com",
       :form => %("#{name}" <#{email}>)
   }
   end

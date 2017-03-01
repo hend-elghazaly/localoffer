@@ -65,3 +65,8 @@ gem 'mail_form', '~> 1.6'
 
 #gem for sending form
 gem 'sendgrid-ruby'
+
+#for fotgot password
+group :development, :test do
+gem 'foreman'
+end
