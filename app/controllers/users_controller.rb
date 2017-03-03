@@ -13,7 +13,8 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       # Deliver the signup email
-      UserNotifier.send_signup_email(@user).deliver
+      #UserNotifier.send_signup_email(@user).deliver
+      WelcomeMailer.welcome(@user).deliver_now
       redirect_to(@user, :notice => 'Signed up successfully.')
     else
       render :action => 'new'
