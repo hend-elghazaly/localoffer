@@ -66,6 +66,13 @@ gem 'mail_form', '~> 1.6'
 #gem for sending form
 gem 'sendgrid-ruby'
 
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
 #for fotgot password
 group :development, :test do
 gem 'foreman'

@@ -1,9 +1,18 @@
+<p class="notice alert-success" role="alert">
+  <%= notice %>
+</p>
+
 <% if !user_signed_in? %>
-<p class="sign_in"><%= link_to "Login", new_user_session_path %></p>
-<p class="sign_up"><%= link_to "Register", new_user_registration_path %></p>
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary btn-lg"><%= link_to "Login", new_user_session_path %></button>
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success btn-lg sign_up"><%= link_to "Register", new_user_registration_path %></button>
 
 <% end %>
+
+
 <% if user_signed_in? %>
+
 <h1> Welcome Back <%= current_user.first_name %>! </h1>
   <div class="buttons">
     <!-- change later to link_to "Pinned Events", pin_path -->
@@ -11,6 +20,3 @@
     <button class= "button"><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></button>
   </div>
 <% end %>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>

@@ -6,17 +6,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
-
   </head>
 
   <body>
+    <div class="container-fluid">
     <!-- Navigation  if you want it fixed add below navbar-fixed-top-->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <nav id="mainNav" class="navbar navbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -28,37 +23,62 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav ">
 
-            <li class="page-scroll">
-              <%= link_to "Advice and Information", information_path %>
-            </li>
-            <li class="page-scroll">
+        <!--    <li class="nav-item">
+              <%= link_to "Advice and Information", information_path %> -->
+              <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advice and Information <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><%= link_to "Your Education", education_path %></li>
+                        <li><%= link_to "Your Health and Wellbeing", health_path %></li>
+                        <li><%= link_to "Your Life", life_path %></li>
+                        <li role="separator" class="divider"></li>
+                        <li><%= link_to "What is a Local Offer?", offer_path %></li>
+                        <li><%= link_to "What is a Local Authority?", authority_path %></li>
+                        <li role="separator" class="divider"></li>
+                        <li><%= link_to "Contact Links for Support", links_path %></li>
+                      </ul>
+                    </li>
+
+              </li>
+            <li class="nav-item">
               <%= link_to "News and Events", news_path %>
             </li>
-            <li class="page-scroll">
+            <li class="nav-item">
               <%= link_to "Game", game_path %>
             </li>
-            <li class="page-scroll">
+            <li class="nav-item">
               <%= link_to "Search Page", search_path %>
             </li>
-            <li class="page-scroll">
+            <li class="nav-item">
               <%= link_to "My Account", myAccount_path %>
             </li>
-            <li class="page-scroll">
+            <li class="nav-item">
               <%= link_to "Feedback", feedback_path%>
             </li>
           </ul>
+          <!-- search in navbar -->
+          <form class="form-inline pull-xs-right container">
+            <input class="form-control" type="text" placeholder="Search">
+            <button class="btn-info btn-outline" type="submit">Search</button>
+          </form>
+
         </div>
         <!-- /.navbar-collapse -->
       </div>
       <!-- /.container-fluid -->
     </nav>
 
-
-    <%= yield %>
-    <%= render "layouts/footer" %>
-    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <%= yield %>
+          <%= render "layouts/footer" %>
+        </div>
+      </div>
+    </div>
+  </div>
   </body>
 
 

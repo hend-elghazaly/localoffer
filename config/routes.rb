@@ -16,6 +16,13 @@ Rails.application.routes.draw do
   get 'game', to: "games#game"
   get 'search', to: "search#index"
   get 'myAccount', to: "accounts#index"
+  get 'education', to: "informations#education"
+  get 'health', to: "informations#health"
+  get 'life', to: "informations#life"
+  get 'links', to: "informations#links"
+  get 'authority', to: "informations#local_authority"
+  get 'offer', to: "informations#local_offer"
+
 
 
 
