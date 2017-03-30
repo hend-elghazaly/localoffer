@@ -1,0 +1,22 @@
+<head>
+  <title> Events </title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+</head>
+
+<body>
+  <h1>What's On</h1>
+
+  <ol class="breadcrumb">
+    <li><a href=/>Home</a></li>
+    <li class="active">Events</li>
+  </ol>
+
+  <p> Looking for something to do? Check out the upcoming events below!</p>
+  <% @eventsArray.each do |result_hit| %>
+    <h2><%=link_to result_hit.title,"http://www.sheffielddirectory.org.uk/kb5/sheffield/directory/#{result_hit.link}"  %></h2>
+    <p><strong><%= result_hit.date %></strong></p>
+    <p><%= result_hit.description %></p>
+    <p><strong>Contact: </strong> <%=link_to result_hit.email, result_hit.contact %></p>
+
+  <% end %>
+</body>

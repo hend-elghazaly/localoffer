@@ -1,6 +1,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -21,12 +43,16 @@ $gray-medium-light: #eaeaea;
   @include box_sizing;
 }
 
-.buttons :hover {
+.social-links :hover {
      -webkit-transform: scale(1.1);
      -moz-transform: scale(1.1);
      -o-transform: scale(1.1);
      color: #3B5998;
  }
+
+.social-links {
+  text-align: right;
+}
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -42,4 +68,21 @@ input {
 
 .button {
   color: white;
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;
+}
+
+.thumbnail{
+   width:250px;
+   height:250px;
+ }
+.thumbnail:hover {
+  webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+
+  color: #70f3ff;
+
 }

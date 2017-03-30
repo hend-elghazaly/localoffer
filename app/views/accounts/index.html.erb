@@ -3,11 +3,12 @@
 </p>
 
 <% if !user_signed_in? %>
+<p> If you do not have an account, sign up now for free to be able to save events you
+   wish to attend in your personalised calendar and also like and comment on events and services. </p>
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary btn-lg"><%= link_to "Login", new_user_session_path %></button>
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success btn-lg sign_up"><%= link_to "Register", new_user_registration_path %></button>
-
+  <a class="btn btn-info btn-lg" alt="Login" href= <%=new_user_session_path%> >Login</a>
+  <!-- Indicates a successful or positive action -->
+  <a class="btn btn-success btn-lg" alt="Sign up" href= <%=new_user_registration_path%> >Register</a>
 <% end %>
 
 
@@ -16,7 +17,8 @@
 <h1> Welcome Back <%= current_user.first_name %>! </h1>
   <div class="buttons">
     <!-- change later to link_to "Pinned Events", pin_path -->
-    <button class= "button"><%= link_to "Pinned Events", news_path%></button>
-    <button class= "button"><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></button>
+    <a class="btn btn-info btn-lg" alt="Your personalised calendar" href= <%=calendar_path%> >Calendar</a>
+    <a class="btn btn-warning btn-lg" alt="Edit your account details" href= <%=edit_user_registration_path%> >Edit Account</a>
+    <a class="btn btn-danger btn-lg" alt="Edit your account details"<%= link_to("Logout", destroy_user_session_path, :method => :delete) %></a>
   </div>
 <% end %>

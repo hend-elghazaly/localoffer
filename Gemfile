@@ -73,7 +73,14 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
-#for fotgot password
+#for forgot password running on local host 5000
 group :development, :test do
 gem 'foreman'
 end
+
+#for calendar
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
+#added simple form in initializer
+gem 'simple_form', '~> 3.4'
