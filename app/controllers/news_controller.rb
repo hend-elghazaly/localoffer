@@ -39,10 +39,15 @@ class NewsController < ApplicationController
       @eventsArray << Event.new(title, date, link, description, contact, email)
     end
 
-    # render the array and see what happens
+    # render the array
     render template: 'news/scrape_events'
 
   end
 
+
+  # def addEventSource
+  #   event={id:1 , title: 'title', start: 'date' end: 'date'}
+  #   event.fullCalendar( 'addEventSource', event )
+  # end
 
 end

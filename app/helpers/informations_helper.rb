@@ -1,2 +1,3 @@
 module InformationsHelper
+
 end

@@ -1,3 +1,5 @@
+//REFERENCE CODE
+
 var initialize_calendar;
 initialize_calendar = function() {
   //to loop through each calendar class

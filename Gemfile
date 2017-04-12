@@ -84,3 +84,6 @@ gem 'momentjs-rails'
 
 #added simple form in initializer
 gem 'simple_form', '~> 3.4'
+
+#to annotate models
+gem 'annotate', '~> 2.7', '>= 2.7'

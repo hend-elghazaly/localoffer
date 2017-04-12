@@ -1,3 +1,20 @@
+.footer {
+//  padding: 10px 0;
+  bottom:0px;
+  height:auto;
+  right:0%;
+  left:0%;
+
+}
+
+.footer {
+    padding-top: 60px;
+    display: block;
+    font-size: 16px;
+    background: #f2ecde;
+    width: 100%;
+}
+
 .social-links{
   font-size: 60px;
 }
@@ -16,6 +33,11 @@
      -o-transition-duration: 0.5s;
  }
 
+
+
+ .social-links {
+   text-align: right;
+ }
 /*
     Multicoloured Hover Variations
 */

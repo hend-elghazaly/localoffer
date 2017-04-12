@@ -6,19 +6,36 @@ class InformationsController < ApplicationController
   def education
   end
 
-  def health
+  def colleges
   end
 
-  def life
+  def support
   end
 
-  def links
+  def adult
   end
 
-  def local_authority
+  def internships
+
   end
 
-  def local_offer
+  def employment
   end
+
+  def transport
+  end
+
+  def leisure
+  end
+
+#for the internships document to fill
+# http://stackoverflow.com/questions/13164063/file-download-link-in-rails
+
+  def download
+    send_data pdf,
+      :filename => "access_to_work_flow_chart.doc",
+      :type => "application/doc"
+  end
+  
 
 end

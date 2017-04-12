@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: link_clicks
+#
+#  id          :integer          not null, primary key
+#  visit_id    :integer
+#  link_name   :string
+#  link_css_id :string
+#  url         :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  visit_id_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visit_id: 1
+  link_name: MyString
+  link_css_id: MyString
+  url: MyText
+  created_at: 2017-04-02 16:26:34
+  updated_at: 2017-04-02 16:26:34
+  visit_id: one
+
+two:
+  visit_id: 1
+  link_name: MyString
+  link_css_id: MyString
+  url: MyText
+  created_at: 2017-04-02 16:26:34
+  updated_at: 2017-04-02 16:26:34
+  visit_id: two

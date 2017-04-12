@@ -1,5 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Quiz Game </title>
+    <link href="assets/game.css" rel="stylesheet" type="text/css">
+
+</head>
+
 <h1> Game </h1>
 <ol class="breadcrumb">
   <li><a href=/>Home</a></li>
   <li class="active">Game</li>
 </ol>
+
+<!-- created by Awais Mizra Published Aug 23, 2016 https://www.youtube.com/watch?v=jvk1pFNqXaw -->
+
+<body>
+    <div class="grid">
+      <div id="quiz">
+        <h1> Quiz Game </h1>
+        <!-- horizontal line after the title -->
+        <hr style="margin-top: 20px">
+
+        <p id="question"></p>
+
+  <!-- for the answers options -->
+        <div class="buttons">
+          <button id="btn0"><span id="choice0"></span></button>
+          <button id="btn1"><span id="choice1"></span></button>
+          <button id="btn2"><span id="choice2"></span></button>
+          <button id="btn3"><span id="choice3"></span></button>
+        </div>
+
+        <hr style="margin-top: 50px">
+
+        <footer>
+          <p id="progress"> </p>
+        </footer>
+
+      </div>
+    </div>
+
+    <%= javascript_include_tag 'quiz_controller' %>
+    <%= javascript_include_tag 'question' %>
+    <%= javascript_include_tag 'app'%>
+
+</body>
+</html>

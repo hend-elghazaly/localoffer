@@ -17,6 +17,8 @@
     <p><strong><%= result_hit.date %></strong></p>
     <p><%= result_hit.description %></p>
     <p><strong>Contact: </strong> <%=link_to result_hit.email, result_hit.contact %></p>
+    <a class="btn btn-info btn-lg" alt="Add to calendar" href= <%=calendar_path%> >Add to Calendar</a>
+    <%= button_to 'Add to calendar', news_addEventSource_path, method: :post %>
 
   <% end %>
 </body>

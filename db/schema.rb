@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170323194856) do
+ActiveRecord::Schema.define(version: 20170402152634) do
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20170323194856) do
     t.string   "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "link_clicks", force: :cascade do |t|
+    t.integer  "visit_id"
+    t.string   "link_name"
+    t.string   "link_css_id"
+    t.text     "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "visit_id_id"
+    t.index ["visit_id_id"], name: "index_link_clicks_on_visit_id_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -47,6 +58,11 @@ ActiveRecord::Schema.define(version: 20170323194856) do
     t.string   "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "visits", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

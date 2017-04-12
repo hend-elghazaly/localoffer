@@ -4,12 +4,9 @@
     <title>Local Offer</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <!-- to make it responsive -->
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <!-- Theme CSS -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- for explorer -->
     <%= render "layouts/shim" %>
@@ -24,7 +21,6 @@
       <div class="container">
         <%= yield %>
 
-        <%= render "layouts/footer" %>
         <!-- if in development mode show errors -->
         <% debug(params) if Rails.env.development? %>
       </div>
@@ -32,6 +28,10 @@
       <div id="remote_container"></div>
 
     </main>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </body>
+  <%= render "layouts/footer" %>
+
 
 </html>

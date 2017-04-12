@@ -1,0 +1,35 @@
+#content
+  .section
+    .container
+      .page-header
+        %h2 Visitor data
+      - @visits.each do |visit|
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title
+              Visit #{visit.id}
+          - if visit.registration.present?
+            .panel-body
+              - registration = visit.registration
+              #{registration.name} (#{registration.email})
+              %p= registration.extra_info
+
+
+
+          %table.table.table-hover
+            %thead
+              %tr
+                %th Link name
+                %th Number of Visits
+
+
+
+
+            %tbody
+              - visit.link_clicks.group_by(&:link_name).each do |link_id, link_clicks|
+                %tr
+                  %td= link_id
+                  %td= link_clicks.count
+
+      %p.lead
+        #{link_to 'Back', '/admin'}
