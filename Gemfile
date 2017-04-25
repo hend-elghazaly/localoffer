@@ -23,6 +23,8 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -87,3 +89,17 @@ gem 'simple_form', '~> 3.4'
 
 #to annotate models
 gem 'annotate', '~> 2.7', '>= 2.7'
+
+#for admin to edit
+# gem 'ckeditor', github: 'galetahub/ckeditor'
+# gem 'paperclip'
+
+#for admin http://codepany.com/blog/rails-5-user-accounts-with-3-types-of-roles-devise-rails_admin-cancancan/
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
+#https://github.com/CanCanCommunity/cancancan#mission
+gem 'cancancan', '~> 1.10'
+
+#for admin to edit
+gem 'tinymce-rails'

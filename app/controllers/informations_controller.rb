@@ -12,6 +12,9 @@ class InformationsController < ApplicationController
   def support
   end
 
+  def ehcp
+  end
+  
   def adult
   end
 
@@ -36,6 +39,6 @@ class InformationsController < ApplicationController
       :filename => "access_to_work_flow_chart.doc",
       :type => "application/doc"
   end
-  
+
 
 end

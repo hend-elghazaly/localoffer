@@ -20,5 +20,9 @@
     <a class="btn btn-info btn-lg" alt="Your personalised calendar" href= <%=calendar_path%> >Calendar</a>
     <a class="btn btn-warning btn-lg" alt="Edit your account details" href= <%=edit_user_registration_path%> >Edit Account</a>
     <a class="btn btn-danger btn-lg" alt="Edit your account details"<%= link_to("Logout", destroy_user_session_path, :method => :delete) %></a>
+
+    <% if current_user.admin? %>
+      <a class="btn btn-success btn-lg" alt="Login" href= <%=admin_path%> >Admin</a>
+    <% end %>
   </div>
 <% end %>

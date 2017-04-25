@@ -1,9 +1,9 @@
 <head>
   <title> Events </title>
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
 </head>
 
-<body>
   <h1>What's On</h1>
 
   <ol class="breadcrumb">
@@ -11,14 +11,49 @@
     <li class="active">Events</li>
   </ol>
 
+
+
+  <!-- <button onclick="myFunction()" id="addEvent">Add Event</button>
+  <div id='calendar'></div> -->
+
+
+  <!-- <script>
+  function myFunction() {
+      document.getElementById("demo").innerHTML = "Hello World";
+  }
+  </script>
+
+  <script>
+
+    ('#addEvent').on('click', function() {
+      var id = Math.random().toString(26).substring(2, 7);
+      addCalendarEvent(id, '2017-04-08', '2017-04-11', 'An added event ' + id);
+    });
+
+    function addCalendarEvent(id, start, end, title) {
+      var eventObject = {
+        id: id,
+        start: start,
+        end: end,
+        title: title
+      };
+      ('.calendar').fullCalendar('renderEvent', eventObject, true);
+    }
+
+
+  </script> -->
+
   <p> Looking for something to do? Check out the upcoming events below!</p>
   <% @eventsArray.each do |result_hit| %>
+<dl>
     <h2><%=link_to result_hit.title,"http://www.sheffielddirectory.org.uk/kb5/sheffield/directory/#{result_hit.link}"  %></h2>
     <p><strong><%= result_hit.date %></strong></p>
     <p><%= result_hit.description %></p>
     <p><strong>Contact: </strong> <%=link_to result_hit.email, result_hit.contact %></p>
-    <a class="btn btn-info btn-lg" alt="Add to calendar" href= <%=calendar_path%> >Add to Calendar</a>
-    <%= button_to 'Add to calendar', news_addEventSource_path, method: :post %>
+    <% if user_signed_in? %>
+      <a class="btn btn-info btn-lg" alt="Add to calendar" href= <%=calendar_path%> >Add to Calendar</a>
+      <!-- <%= button_to 'Add to calendar', news_addEventSource_path, method: :post %> -->
+    <%end%>
+</dl>
 
   <% end %>
-</body>

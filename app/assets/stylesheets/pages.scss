@@ -34,3 +34,26 @@ body { padding-top: 80px; }
   background-color: #0aa344;
 
 }
+
+//Ariel, 2015 http://stackoverflow.com/questions/1713048/how-to-style-dt-and-dd-so-they-are-on-the-same-line Accessed 25/4/2017
+dl {
+  width: 100%;
+  overflow: hidden;
+  background: #FDEDD0;
+  font-size: 14px;
+}
+dt {
+  float: left;
+  width: 19%;
+  font-size: 16px;
+}
+dd {
+  float: left;
+  width: 79%;
+  font-size: 18px;
+
+  /* adjust the width; make sure the total of both is 100% */
+}
+.title{
+  color: #FF634D
+}

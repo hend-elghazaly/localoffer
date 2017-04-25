@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 #for calendar
   resources :events
   post 'news/addEventSource'
@@ -41,6 +42,7 @@ Rails.application.routes.draw do
   get 'employment', to: "informations#employment"
   get 'colleges', to: "informations#colleges"
   get 'support', to: "informations#support"
+  get 'ehcp', to: "informations#ehcp"
 
 
   get 'sitemap/index'
