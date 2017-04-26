@@ -1,19 +1,26 @@
 .navbar-header a{
-  font-size: 20px;
+  font-size: 24px;
   font-style: italic;
 }
 
 .navbar {
   margin-bottom: 30px;
-  background-color: #003472;
-  font-color: #fff !important;
-  font-size: 16px;
+  background-color: #0099CC;
+  font-size: 20px;
 
 }
 
 
-body { padding-top: 80px; }
+body {
+  padding-top: 80px;
+}
+p {
+  font-size: 16px;
+}
+li {
+  font-size: 16px;
 
+}
 
 .container input[type="submit"] {
     height: 30px;
@@ -25,6 +32,7 @@ body { padding-top: 80px; }
 
 .navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle, button a {
  color: #fff;
+ font-size: 20px
 }
 
 
@@ -39,7 +47,6 @@ body { padding-top: 80px; }
 dl {
   width: 100%;
   overflow: hidden;
-  background: #FDEDD0;
   font-size: 14px;
 }
 dt {
@@ -54,6 +61,16 @@ dd {
 
   /* adjust the width; make sure the total of both is 100% */
 }
-.title{
-  color: #FF634D
+.activity{
+  color: #FF634D;
+}
+
+.activities > dl {
+  background: #FDEDD0;
+}
+.school > dl {
+  background-color: #F1F0FF;}
+
+.title {
+  color:#663399;
 }

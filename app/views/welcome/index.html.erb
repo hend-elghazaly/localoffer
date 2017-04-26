@@ -4,15 +4,53 @@
    <title>Sheffield Hub</title>
 </head>
 <body>
-<h1> Welcome to Your Local Offer Guide</h1>
+  <div class="home">
+  <h1> Welcome to Your Local Offer Guide</h1>
 
-<p>You will find on this website some information in the Local Offer to prepare you for adult life.</p>
+  <br>
+  <!--https://www.w3schools.com/html/html_youtube.asp-->
+  <iframe width="420" height="345" src="https://www.youtube.com/embed/gioRTHZLtcw"> </iframe>
+  <br>
+  <br>
 
-<!--https://www.w3schools.com/html/html_youtube.asp-->
-<iframe width="420" height="345" src="https://www.youtube.com/embed/gioRTHZLtcw">
-</iframe>
+  <p> The video on the right explains what a Local Offer is.
+  <p>If you need subtitles, click on the settings on the video and switch the subtitles on</p>
+  <br>
+  <br>
 
+  <p>You will find on this website some information from the Local Offer to prepare you for adult life.</p>
 
+  <br>
+  <p> This website includes information on 3 main aspects: <strong> education, becoming an adult and leisure </strong></p>
+  <p> Check the links below or from the navigation bar to find the relevant information. </p>
+  <br>
 
+    <!-- <div class="row">
+      <div class="col-xs-6 col-md-4 education">
+        <a href= <%=education_path%> class="thumbnail">
+          <img src="/assets/education.png" alt="Your Education"> </a>
+      </div>
+      <div class="col-xs-6 col-md-4 leisure">
+        <a href= <%=leisure_path%> class="thumbnail">
+          <img src="/assets/leisure.png" alt="Your Leisure" > </a>
+      </div>
+      <div class="col-xs-6 col-md-4 adult">
+        <a href= <%=adult_path%> class="thumbnail">
+            <img src="/assets/adult.png" alt="Becoming an Adult"></a>
+      </div>
+    </div> -->
+
+    <ul class="thumbnails">
+       <li>
+        <a href="<%=education_path%> " class="thumbnail"><img src="/assets/education.png" alt="Your Education"/></a>
+       </li>
+       <li>
+        <a href= "<%=leisure_path%>" class="thumbnail"><img src="/assets/leisure.png" alt="Your Leisure"/></a>
+      </li>
+      <li>
+        <a href= "<%=adult_path%>" class="thumbnail"><img src="/assets/adult.png" alt="Becoming an Adult"/></a>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>

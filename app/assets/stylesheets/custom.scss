@@ -6,6 +6,7 @@
 body {
   padding-top: 60px;
 }
+p, li {font-size: 18px;}
 
 section {
   overflow: auto;
@@ -69,8 +70,58 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
    width:250px;
    height:250px;
  }
+//  .thumbnails {
+//     text-align:center;
+// }
+//
+// .thumbnails  {
+//     display: inline-block;
+//     *display:inline; /* ie7 fix */
+//     float: none; /* this is the part that makes it work */
+// }
 
 //https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
  .thumbnail:hover {
     opacity: 0.7;
+}
+
+.thumbnails {
+    text-align:center;
+}
+
+.thumbnails > li {
+    display: inline-block;
+    *display:inline; /* ie7 fix */
+    float: none; /* this is the part that makes it work */
+}
+.education {
+  left: 0;
+  top: 0;
+}
+.leisure{left: 500px; top: 0;
+}
+.adult {
+  left: 250px; top: 0
+
+}
+
+iframe {
+  float: right;
+}
+
+.section-header  {
+  border: 2px solid #660099;
+  border-radius: 5px;
+}
+
+.card {
+  font-size: 18px;
+}
+
+.careers {
+  border: 2px solid green;
+  border-radius: 5px;}
+
+.home {
+  background-color: #FFF8DC;
 }
