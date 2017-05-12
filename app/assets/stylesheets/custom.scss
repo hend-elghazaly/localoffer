@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'social-share-button';
 
 /* universal */
 
@@ -88,7 +89,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 .thumbnails {
     text-align:center;
 }
-
+//http://stackoverflow.com/questions/10103692/horizontally-align-thumbnails-in-center
 .thumbnails > li {
     display: inline-block;
     *display:inline; /* ie7 fix */
@@ -109,6 +110,7 @@ iframe {
   float: right;
 }
 
+//for borders https://www.w3schools.com/css/css_border.asp
 .section-header  {
   border: 2px solid #660099;
   border-radius: 5px;
@@ -124,4 +126,14 @@ iframe {
 
 .home {
   background-color: #FFF8DC;
+}
+
+$size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
 }

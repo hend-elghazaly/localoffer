@@ -1,19 +1,22 @@
 .footer {
-//  padding: 10px 0;
   bottom:0px;
   height:auto;
   right:0%;
   left:0%;
+  padding-top: 60px;
+  display: block;
+  width: 100%;
+  background: #003366;
 
 }
 
-.footer{
-    padding-top: 60px;
-    display: block;
+.footer, .footer a{
     font-size: 16px;
-    background: #003366;
     color: #fff;
-    width: 100%;
+}
+
+.footer :hover {
+  color: yellow;
 }
 
 .social-links a{

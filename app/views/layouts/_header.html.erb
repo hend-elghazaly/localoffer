@@ -7,7 +7,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand" href=/>Your Local Offer Guide</a>
+      <a class="navbar-brand" href=/ accesskey="h">Your Local Offer Guide</a>
 
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,7 +30,8 @@
 
           </li>
         <li class="nav-item">
-          <%= link_to "Events", news_path %>
+          <a href="<%=news_path%>" accesskey="2">Events</a>
+
         </li>
 
         <li class="nav-item">
@@ -39,8 +40,9 @@
         <li class="nav-item">
           <%= link_to "My Account", myAccount_path %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Feedback", feedback_path%>
+        <li class="nav-item ">
+          <a href="<%=feedback_path%>" accesskey="9">Feedback</a>
+
         </li>
 
       <!-- search in navbar -->

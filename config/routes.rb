@@ -5,9 +5,6 @@ Rails.application.routes.draw do
   resources :events
   post 'news/addEventSource'
 
-#for admin
-  resources :link_clicks, only: :create
-  resources :visits, only: :index
 
   controller :pages do
     get :visit, path: '/visit'
@@ -19,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+  resources :users, only: :destroy
 
   resources :feedbacks, only: [:new,:create]
   root 'welcome#index'
@@ -31,7 +29,7 @@ Rails.application.routes.draw do
   get 'education', to: "informations#education"
   get 'adult', to: "informations#adult"
   get 'leisure', to: "informations#leisure"
-  get 'links', to: "informations#links"
+  # get 'links', to: "informations#links"
   get 'authority', to: "informations#local_authority"
   get 'offer', to: "informations#local_offer"
   get 'news', to: "news#scrape_events"
@@ -44,13 +42,15 @@ Rails.application.routes.draw do
   get 'support', to: "informations#support"
   get 'ehcp', to: "informations#ehcp"
 
+#web accesibility statement
+  get 'accessability', to: "informations#accessability"
+  get 'sitemap', to: "sitemap#index"
 
-  get 'sitemap/index'
+
 
   get "/admin", to: "admins#index"
 
-#for sitemap http://aspiringwebdev.com/sitemaps-in-rails-in-five-minutes/
-  get 'sitemap.xml', :to => 'sitemap#index', :defaults => {:format => 'xml'}
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

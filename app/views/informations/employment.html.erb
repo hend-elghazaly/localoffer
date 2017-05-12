@@ -1,37 +1,66 @@
-<h1> Employment and Careers </h1>
-<ol class="breadcrumb">
-  <li><a href=/>Home</a></li>
-  <li><a href="<%=information_path%>">Advice and Information</a></li>
-  <li><a href="<%=adult_path%>">Becoming an Adult</a></li>
-  <li class="active">Employment and Careers</li>
-</ol>
+<!-- for collapse: bootstrap collapse attribute was used https://v4-alpha.getbootstrap.com/components/collapse/ -->
 
-<p> Just like everybody else, young people with SEN need to prepared for employment. Adults can try to arrange work-based learning that helps young people to have first-hand experience of work. <p>
-<p>These might include:</p>
-<h3 class="careers"  data-toggle="collapse" data-target="#collapseSection1" aria-expanded="false" aria-controls="collapseExample">
-  Apprenticeships</h3>
-<div class="collapse" id="collapseSection1">
-  <div class="card card-block">
-    These are paid jobs that include training. Young people can get nationally recognised qualifications. Apprentices earn as they learn and gain practical skills in the workplace. Young people with EHC plans can keep their plan when on an apprenticeship.  
+<head>
+  <title> Employment </title>
+  <%= javascript_include_tag 'resize' %>
+  <link href="assets/resize.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+  <div>
+    <div id="controls">
+      <a href="#" id="small">A</a>
+      <a href="#" id="medium" class="selected">A</a>
+      <a href="#" id="large">A</a>
+    </div>
+
+    <h1> Employment and Careers </h1>
+    <ol class="breadcrumb">
+      <li><a href=/>Home</a></li>
+      <li><a href="<%=information_path%>">Advice and Information</a></li>
+      <li><a href="<%=adult_path%>">Becoming an Adult</a></li>
+      <li class="active">Employment and Careers</li>
+    </ol>
+
+    <p> Just like everybody else, young people with SEN need to prepared for employment. Adults can try to arrange work-based learning that helps young people to have first-hand experience of work. <p>
+    <p>These might include:</p>
+    <h3 class="careers">
+     <a data-toggle="collapse"  href="#Apprenticeships" aria-expanded="false" aria-controls="Apprenticeships">
+      Apprenticeships
+     </a>
+    </h3>
+    <div class="collapse" id="Apprenticeships">
+      <div class="card card-block">
+        <p>These are paid jobs that include training. Young people can get nationally recognised qualifications. Apprentices earn as they learn and gain practical skills in the workplace. Young people with EHC plans can keep their plan when on an apprenticeship.  </p>
+      </div>
+    </div>
+
+    <h3 class="careers">
+     <a data-toggle="collapse"  href="#Traineeships" aria-expanded="false" aria-controls="Traineeships">
+      Traineeships
+     </a>
+    </h3>
+    <div class="collapse" id="Traineeships">
+      <div class="card card-block">
+        <p>These are education and training programmes with work experience. They focus on giving young people the skills and experience they need to help them compete for an apprenticeship or other jobs. Traineeships last a maximum of six months and include English and Maths (unless GCSE A*-C standard has already been achieved). There is also a high quality work experience placement. They are currently open to young people aged 16 to 24, including those with EHC plans. Young people with EHC plans can keep their plan when doing a traineeship.  </p>  
+      </div>
+    </div>
+
+    <h3 class="careers">
+     <a data-toggle="collapse"  href="#internships" aria-expanded="false" aria-controls="internships">
+      Supported internships
+     </a>
+    </h3>
+    <div class="collapse" id="internships">
+      <div class="card card-block">
+        <p>These are structured study programmes for young people with an EHC plan. The young person is usually based with an employer. Internships normally last for a year and include unpaid work placements of at least six months. Wherever possible, they help the young person to move into paid work at the end of the programme. Students complete a personalised study programme. This includes the chance to study for qualifications, if suitable, and English and Maths to an appropriate level. Young people with EHC plans will keep their plan when undertaking a supported internship.
+         If you are interested, find out more <a href="<%=internships_path%>" ><strong>here.</strong></a> </p>
+    </div>
+    </div>
+    <br>
+    <br>
+    <p>You can find out more by contacting Sheffield City Council’s SEN department. <a href="https://www.sheffieldfutures.org.uk" target="_blank"> Sheffield Futures </a> are also helpful in finding work or getting some careers advice.</p>
   </div>
-</div>
-
-<h3 class="careers"  data-toggle="collapse" data-target="#collapseSection2" aria-expanded="false" aria-controls="collapseExample">
-  Traineeships</h3>
-<div class="collapse" id="collapseSection2">
-  <div class="card card-block">
-    These are education and training programmes with work experience. They focus on giving young people the skills and experience they need to help them compete for an apprenticeship or other jobs. Traineeships last a maximum of six months and include English and Maths (unless GCSE A*-C standard has already been achieved). There is also a high quality work experience placement. They are currently open to young people aged 16 to 24, including those with EHC plans. Young people with EHC plans can keep their plan when doing a traineeship.  
-  </div>
-</div>
-
-<h3 class="careers"  data-toggle="collapse" data-target="#collapseSection3" aria-expanded="false" aria-controls="collapseExample">
-  Supported internships</h3>
-<div class="collapse" id="collapseSection3">
-  <div class="card card-block">
-     These are structured study programmes for young people with an EHC plan. The young person is usually based with an employer. Internships normally last for a year and include unpaid work placements of at least six months. Wherever possible, they help the young person to move into paid work at the end of the programme. Students complete a personalised study programme. This includes the chance to study for qualifications, if suitable, and English and Maths to an appropriate level. Young people with EHC plans will keep their plan when undertaking a supported internship.
-     If you are interested, find out more <a href="<%=internships_path%>" ><strong>here.</strong></a>
-</div>
-</div>
-<br>
-<br>
-<p>You can find out more by contacting Sheffield City Council’s SEN department. <a href="https://www.sheffieldfutures.org.uk" target="_blank"> Sheffield Futures </a> are also helpful in finding work or getting some careers advice.</p>
+</body>

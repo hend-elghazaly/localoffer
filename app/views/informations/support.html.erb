@@ -1,5 +1,18 @@
-<!DOCTYPE html>
-<%= tinymce %>
+
+<head>
+  <title>Support</title>
+  <%= javascript_include_tag 'resize' %>
+  <link href="assets/resize.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <div>
+    <div id="controls">
+      <a href="#" id="small">A</a>
+      <a href="#" id="medium" class="selected">A</a>
+      <a href="#" id="large">A</a>
+    </div>
 
 <h1>My Support</h1>
 <ol class="breadcrumb">
@@ -13,9 +26,13 @@
   <!-- <%= tinymce_assets %>
   <%= text_area_tag :content, "", :class => "tinymce", :rows => 40, :cols => 120 %> -->
 
-<h3 class="section-header"  data-toggle="collapse" data-target="#collapseSection1" aria-expanded="false" aria-controls="collapseExample">
-  What are Special Educational Needs?</h3>
-<div class="collapse" id="collapseSection1">
+<h3 class="section-header">
+ <a data-toggle="collapse"  href="#definition" aria-expanded="false" aria-controls="definition">
+   What are Special Educational Needs?
+ </a>
+ </h3>
+
+<div class="collapse" id="definition">
   <div class="card card-block">
       A young person has special educational needs (SEN) if they have a learning difficulty or
       disability which means that they need special educational provision.
@@ -25,9 +42,12 @@
   </div>
 </div>
 
-<h3 class="section-header"  data-toggle="collapse" data-target="#collapseSection2" aria-expanded="false" aria-controls="collapseExample">
-  Difficulties Special Educational Needs Pupils Face</h3>
-<div class="collapse" id="collapseSection2">
+<h3 class="section-header">
+ <a data-toggle="collapse"  href="#difficulties" aria-expanded="false" aria-controls="difficulties">
+   Difficulties Special Educational Needs Pupils Face </a>
+ </h3>
+
+<div class="collapse" id="difficulties">
   <div class="card card-block">
     <p>Having a learning difficulty or disability means that a pupil has much greater difficulty in learning than most pupils of the same age,
       or a disability which makes it more difficult for them to use the school facilities. For example, they may have problems with: </p>
@@ -45,9 +65,12 @@
   </div>
 </div>
 
-  <h3 class="section-header"  data-toggle="collapse" data-target="#collapseSection3" aria-expanded="false" aria-controls="collapseExample">
-    Who can help? Who’s who in SEN</h3>
-  <div class="collapse" id="collapseSection3">
+<h3 class="section-header">
+ <a data-toggle="collapse"  href="#who" aria-expanded="false" aria-controls="who">
+   Who can help? Who’s who in SEN </a>
+ </h3>
+
+  <div class="collapse" id="who">
     <div class="card card-block">
       <li> <strong>Teaching Assistant:</strong> Also known as Learning Support Assistant. Supports the teacher, and may work with pupils with SEN on an individual, small-group or whole-class basis.</ul>
       <li> <strong>SENCO:</strong> Special Educational Needs Co-ordinator. A qualified teacher who has responsibility for co-ordinating the SEN provision within a school. </li>
@@ -61,3 +84,5 @@
     </div>
   </div>
 <br>
+</div>
+</body>

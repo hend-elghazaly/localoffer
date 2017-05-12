@@ -1,21 +1,37 @@
-<h1> Your Leisure </h1>
-<ol class="breadcrumb">
-  <li><a href=/>Home</a></li>
-  <li><a href="<%=information_path%>">Advice and Information</a></li>
-  <li class="active">Leisure</li>
-</ol>
+<head>
+  <title>Leisure</title>
 
-<p> Here is a list of some of the most popular websites visited to find out about clubs and groups. </p>
+  <%= javascript_include_tag 'resize' %>
+  <link href="assets/resize.css" rel="stylesheet" type="text/css">
+</head>
 
-<div class="activities">
-<dl>
-  <h3><a href="https://twitter.com/activitysheff?lang=en" class="activity" target="_blank">Activity Sheffield</a></h3>
-</dl>
-<dl>
-  <h3><a href="https://siv.org.uk" class="activity" target="_blank">Sheffield International Venues (SIV)</a></h3>
-</dl>
-<dl>
-  <h3><a href="http://www.sheffielddirectory.org.uk/kb5/sheffield/directory/adult.page?adultchannel=9_5" class="activity" target="_blank">Sheffield Directory</a></h3>
+<body>
+  <div>
+    <div id="controls">
+      <a href="#" id="small">A</a>
+      <a href="#" id="medium" class="selected">A</a>
+      <a href="#" id="large">A</a>
+    </div>
+    <h1> Your Leisure </h1>
+    <ol class="breadcrumb">
+      <li><a href=/>Home</a></li>
+      <li><a href="<%=information_path%>">Advice and Information</a></li>
+      <li class="active">Leisure</li>
+    </ol>
 
-</dl>
-</div>
+    <p> Here is a list of some of the most popular websites visited to find out about clubs and groups. </p>
+
+    <div class="activities">
+    <dl>
+      <h3><a href="https://www.facebook.com/oursheff/" class="activity" target="_blank">Activity Sheffield</a></h3>
+    </dl>
+    <dl>
+      <h3><a href="https://siv.org.uk" class="activity" target="_blank">Sheffield International Venues (SIV)</a></h3>
+    </dl>
+    <dl>
+      <h3><a href="http://www.sheffielddirectory.org.uk/kb5/sheffield/directory/adult.page?adultchannel=9_5" class="activity" target="_blank">Sheffield Directory</a></h3>
+
+    </dl>
+    </div>
+  </div>
+</body>

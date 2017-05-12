@@ -38,6 +38,8 @@
   <h3>Cancel My Account</h3>
   <h4>Unhappy?</h4>
   <a class="btn btn-info btn-lg" alt="Provide feedback" href= <%=feedback_path%> >Feedback</a>
-  <a class="btn btn-danger btn-lg" alt="Cancel your account"<%= link_to("Cancel my account", destroy_user_session_path, data: { confirm: "Are you sure?" }, :method => :delete) %></a>
+  <!-- <a class="btn btn-danger btn-lg" alt="Cancel your account"<%= link_to("Cancel my account", destroy_user_session_path, data: { confirm: "Are you sure?" }, :method => :delete) %></a>
+  <%= button_to "Cancel my account", @user, method: :delete, data: { confirm: "Are you sure?" } %> -->
+  <%= button_to "Cancel my account", '/users/#{@user.id}',   data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %>
 
 <p>  <%= link_to "Back", :back %> </p>

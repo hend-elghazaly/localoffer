@@ -15,6 +15,7 @@
 //= require moment
 //= require fullcalendar
 //= require daterangepicker
+//= require social-share-button
 //= require tether
 //= require bootstrap-sprockets
 //= require bootstrap

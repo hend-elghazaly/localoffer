@@ -14,7 +14,7 @@ class InformationsController < ApplicationController
 
   def ehcp
   end
-  
+
   def adult
   end
 
@@ -40,5 +40,7 @@ class InformationsController < ApplicationController
       :type => "application/doc"
   end
 
+  def accessability
+  end
 
 end

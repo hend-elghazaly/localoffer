@@ -74,7 +74,7 @@ gem 'bootstrap-sass'
 gem 'mail_form', '~> 1.6'
 
 #gem for sending form
-gem 'sendgrid-ruby'
+# gem 'sendgrid-ruby'
 
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
@@ -111,3 +111,20 @@ gem 'cancancan', '~> 1.10'
 
 #for admin to edit
 gem 'tinymce-rails'
+
+#for testing http://railscasts.com/episodes/275-how-i-test?autoplay=true
+# gem "rspec-rails", :group => [:test, :development]
+# group :test do
+#   gem "factory_girl_rails"
+#   gem "capybara"
+#   gem "guard-rspec"
+# end
+
+#http://www.cakesolutions.net/teamblogs/brief-introduction-to-rspec-and-simplecov-for-ruby
+source 'https://rubygems.org'
+
+gem 'rspec', :require => false, :group => :test
+gem 'simplecov', :require => false, :group => :test
+
+#for sharing on social media (huacnlee, 2017 Available from https://github.com/huacnlee/social-share-button [Accessed April 2017]
+gem 'social-share-button', github: "huacnlee/social-share-button"

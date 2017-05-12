@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-
+#Adrian (2015) Available from http://adrianmcli.com/2015/05/23/rails-scraping-tutorial/ [Accessed 14 March 2017]
   # Define the Event object
    class Event
      def initialize(title, date, link, description, contact, email)
@@ -25,7 +25,7 @@ class NewsController < ApplicationController
     require 'open-uri'
     doc = Nokogiri::HTML(open("http://www.sheffielddirectory.org.uk/kb5/sheffield/directory/whats_on.page"))
 
-    # Narrow down on what we want and build the entries array
+    # Narrow down on what we want and build the events array
     events = doc.css('.result_hit')
     @eventsArray = []
     events.each do |result_hit|
@@ -35,7 +35,7 @@ class NewsController < ApplicationController
       link = result_hit.css('h2>a')[0]['href']
       contact = result_hit.css('.contact_link')[0]['href']
       email = result_hit.css('.hit-email>a').text
-      #website = result_hit.css('footer>a')[0]['href']
+
       @eventsArray << Event.new(title, date, link, description, contact, email)
     end
 

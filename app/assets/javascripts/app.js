@@ -46,6 +46,8 @@ function showScores(){
   gameOverHtml += "<li id='li'> A Local Offer is a <strong> guide to services </strong>. </li>";
   gameOverHtml += "<li id='li'> <strong> The Local Authority </strong> produces the Local Offer. </li>";
   gameOverHtml += "<li id='li'> EHCP stands for <strong> Education Health Care Plan </strong>. </li>";
+  gameOverHtml += "<li id='li'> If I want to work, I should <strong> ask my teacher </strong>. </li>";
+  gameOverHtml += "<li id='li'> SENCO stands for <strong> Special Educational Needs Co-ordinator </strong>. </li>";
 
   var element = document.getElementById("quiz");
   element.innerHTML = gameOverHtml;
@@ -58,8 +60,8 @@ var questions = [
   new Question("What is a Local Offer?", ["Discount", "Guide to services", "Contract", "Legal document"],"Guide to services"),
   new Question("__________ produces the Local Offer.", ["Local Authority", "Schools", "Hospitals", "Clubs"],"Local Authority"),
   new Question("EHCP stands for_______", ["Epilepsy Health Centre Place", "Education Home Care People", "Education Health Care Plan", "Eat Hear Care Pray"],"Education Health Care Plan"),
-  new Question("If I want to work I should______", ["Discount", "Guide to services", "Contract", "Legal thing I have nothing to do with"],"Guide to services"),
-  new Question("What is a Local Offer?", ["Discount", "Guide to services", "Contract", "Legal thing I have nothing to do with"],"Guide to services")
+  new Question("If I want to work I should______", ["Ask my teacher", "Post on facebook", "I can't work", "Start my own business"],"Ask my teacher"),
+  new Question("SNECO stands for _______", ["Small Enterprise National Communication", "Special Educational Needs Co-ordinator", "Does not mean anything", "Simple Education National Collaboration "],"Special Educational Needs Co-ordinator")
 
 ];
 

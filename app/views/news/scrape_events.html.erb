@@ -1,8 +1,27 @@
 <head>
   <title> Events </title>
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-
+  <!-- Style of add to calendar button -->
+  <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css " rel="stylesheet" type="text/css">
+  <%= javascript_include_tag 'resize' %>
+  <link href="assets/resize.css" rel="stylesheet" type="text/css">
 </head>
+<body>
+  <!--https://developers.facebook.com/docs/plugins/share-button/ -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="controls">
+      <a href="#" id="small">A</a>
+      <a href="#" id="medium" class="selected">A</a>
+      <a href="#" id="large">A</a>
+    </div>
 
   <h1>What's On</h1>
 
@@ -12,10 +31,10 @@
   </ol>
 
 
-
   <!-- <button onclick="myFunction()" id="addEvent">Add Event</button>
   <div id='calendar'></div> -->
 
+<!-- error might be because u have to include all fields of calendar like the other one -->
 
   <!-- <script>
   function myFunction() {
@@ -45,15 +64,53 @@
 
   <p> Looking for something to do? Check out the upcoming events below!</p>
   <% @eventsArray.each do |result_hit| %>
+<div class="eventsc">
 <dl>
     <h2><%=link_to result_hit.title,"http://www.sheffielddirectory.org.uk/kb5/sheffield/directory/#{result_hit.link}"  %></h2>
     <p><strong><%= result_hit.date %></strong></p>
     <p><%= result_hit.description %></p>
     <p><strong>Contact: </strong> <%=link_to result_hit.email, result_hit.contact %></p>
-    <% if user_signed_in? %>
+
+    <!-- <% if user_signed_in? %>
+
       <a class="btn btn-info btn-lg" alt="Add to calendar" href= <%=calendar_path%> >Add to Calendar</a>
-      <!-- <%= button_to 'Add to calendar', news_addEventSource_path, method: :post %> -->
-    <%end%>
+      <!-- <%= button_to 'Add to calendar', news_addEventSource_path, method: :post %>
+    <%end%> -->
+
+    <!-- Copyright (c) 2015 AddToCalendar -->
+    <script type="text/javascript">(function () {
+            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js'; //<!-- change this link to events link -->
+                var h = d[g]('body')[0];h.appendChild(s); }})();
+    </script>
+
+    <!--  Place event data Copyright (c) 2015 AddToCalendar-->
+    <span class="addtocalendar atc-style-blue">
+        <var class="atc_event">
+            <var class="atc_date_start">2017-05-04 12:00:00</var>
+             <var class="atc_date_end">2017-05-04 18:00:00</var>
+             <var class="atc_timezone">Europe/London</var>
+             <var class="atc_title"><%= result_hit.title %></var>
+             <var class="atc_description"><%= result_hit.description %></var>
+             <var class="atc_location">Tatooine</var>
+             <var class="atc_organizer"><%= result_hit.contact %></var>
+             <var class="atc_organizer_email"><%= result_hit.email %></var>
+        </var>
+    </span>
+<br>
+<br>
+    <%= social_share_button_tag("http://www.sheffielddirectory.org.uk/kb5/sheffield/directory/#{result_hit.link}") %>
+
+    <div class="fb-share-button" data-href="http://www.sheffielddirectory.org.uk/kb5/sheffield/directory/#&#123;result_hit.link&#125;" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sheffielddirectory.org.uk%2Fkb5%2Fsheffield%2Fdirectory%2F%23%7Bresult_hit.link%7D&amp;src=sdkpreparse">Share</a></div>
+
+
 </dl>
 
+</div>
   <% end %>
+
+</div>
+</body>
