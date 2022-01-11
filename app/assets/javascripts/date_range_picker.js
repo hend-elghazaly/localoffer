@@ -1,3 +1,4 @@
+<!-- //www.daterangepicker.com Accessed -->
 var date_range_picker;
 date_range_picker = function() {
   $('.date-range-picker').each(function(){

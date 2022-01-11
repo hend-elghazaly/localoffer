@@ -1,6 +1,6 @@
 class Feedback < MailForm::Base
 
-  #https://www.youtube.com/watch?v=QIoORYeBdhs
+  #Adapted from https://www.youtube.com/watch?v=QIoORYeBdhs
   attribute :name,      :validate => true
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message,   :validate => true

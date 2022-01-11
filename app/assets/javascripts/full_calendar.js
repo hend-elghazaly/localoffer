@@ -1,4 +1,5 @@
-//REFERENCE CODE
+//Adapted from Drifting Ruby Available from https://www.youtube.com/watch?v=NiTLuPqvt58
+
 
 var initialize_calendar;
 initialize_calendar = function() {
